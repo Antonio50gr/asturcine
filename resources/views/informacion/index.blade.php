@@ -10,7 +10,7 @@
 
 nav {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 
