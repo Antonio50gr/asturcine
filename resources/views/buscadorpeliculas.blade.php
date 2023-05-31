@@ -23,6 +23,7 @@
             display: none;
             position: relative;
             z-index: 0;
+            
         }
 
         .card_right{
@@ -36,11 +37,14 @@
         .card_right__trailer {
         margin-top: 250px; 
         max-width: 100%;
+        position:absolute;
+        background-color: #111827;
         }
 
         .card_right__trailer iframe {
         width: 100%;
         height: 300px;
+
         }
 
 
@@ -67,6 +71,8 @@
         align-items: center;
         
         }
+
+      
 
 
 
@@ -133,14 +139,16 @@
                 </div>
                 
               
-                <div class="card_right__trailer">
-                    <iframe id="trailer" width="450" height="300" src="" frameborder="0" allowfullscreen></iframe>
-                </div>
-               
               
             </div>
           </div>
-        </div>
+</div>
+
+
+<div class="card_right__trailer">
+    <iframe id="trailer" width="450" height="300" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+               
 
         
                 
