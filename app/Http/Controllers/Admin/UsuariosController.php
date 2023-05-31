@@ -83,6 +83,8 @@ class UsuariosController extends Controller
      */
     public function destroy(User $usuario)
     {
+
+        
         $usuario->delete();
 
         return redirect()->route('admin.usuarios.index')->with('info','El usuario se eliminó con exito');
