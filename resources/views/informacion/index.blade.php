@@ -97,17 +97,17 @@ nav {
 
                   <div class="form-group">
                     <label>Nombre</label>
-                    <input class="form-control" type="text" value="{{Auth::user()->name}}" readonly>
+                    <input class="form-control" type="text" value="{{Auth::user()->name}}"  readonly style="width: auto;">
                   </div>
                   
                   <div class="form-group">
                     <label>Email <span class="color-red"></span></label>
-                    <input class="form-control" type="text" value="{{Auth::user()->email}}" readonly>
+                    <input class="form-control" type="text" value="{{Auth::user()->email}}"  readonly style="width: auto;">
                   </div> 
 
                   <div class="form-group"> 
                     <label>Mensaje </label>
-                    <textarea class="form-control" name="comentario" rows="8" required></textarea>
+                    <textarea class="form-control" name="comentario" rows="8" required ></textarea>
 
                     <input type="hidden" name="usuario_id" value="{{Auth::user()->id}}">
                     <input type="hidden" name="pelicula_id" value="{{$informacionArray['id']}}">

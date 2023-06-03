@@ -93,12 +93,12 @@ nav {
 
                   <div class="form-group">
                     <label>Nombre</label>
-                    <input class="form-control" type="text" value="{{Auth::user()->name}}" readonly>
+                    <input class="form-control" type="text" value="{{Auth::user()->name}}" readonly style="width: auto;">
                   </div>
                   
                   <div class="form-group">
                     <label>Email <span class="color-red"></span></label>
-                    <input class="form-control" type="text" value="{{Auth::user()->email}}" readonly>
+                    <input class="form-control" type="text" value="{{Auth::user()->email}}" readonly style="width: auto;">
                   </div> 
 
                   <div class="form-group"> 
