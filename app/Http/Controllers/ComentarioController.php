@@ -24,7 +24,6 @@ class ComentarioController extends Controller
      */
     public function store(ComentarioRequest $request)
     {   
-        // dd($request->all());
          $comentario = new Comentario;
          $comentario->comentario = $request->comentario;
          $comentario->usuario_id = $request->usuario_id;
@@ -34,8 +33,6 @@ class ComentarioController extends Controller
         return redirect()->back()->with('success', 'Comentario agregado exitosamente.');
     
     }
-
-
 
     /**
      * Remove the specified resource from storage.

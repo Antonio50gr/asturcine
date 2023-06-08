@@ -17,12 +17,6 @@ class Comentario extends Model
 {
     return $this->belongsTo(User::class, 'usuario_id');
 }
-    // public function usuario(){
-    //     return $this->belongsTo(Users::class, 'comentario_id');
-    // }
 
-    // public function hijo(){
-    //     return $this->belongsTo(Comentario::class, 'comentario_id');
-    // }
 }
 

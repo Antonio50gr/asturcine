@@ -149,11 +149,11 @@ nav a {
             </div>
 
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
+                <x-responsive-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
                 @can('Ver panel')
-                <x-responsive-nav-link :href="route('admin.index')">
+                <x-responsive-nav-link :href="route('admin.index')"  :active="request()->routeIs('admin.index')" >
                     {{ __('Panel administrador') }}
                 </x-responsive-nav-link>
                 @endcan

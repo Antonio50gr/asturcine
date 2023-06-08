@@ -45,11 +45,11 @@ class ValoracionController extends Controller
         $valoracionExistente = Valoracion::where('usuario_id', $usuario_id)->where('pelicula_id', $pelicula_id)->first();
     
         if ($valoracionExistente) {
-            // Actualizo la valoracion que ya existe
+        // Actualizo la valoracion que ya existe
             $valoracionExistente->valoracion = $valoracion;
             $valoracionExistente->save();
         } else {
-            // Creo una nueva valoracion si no existe
+         // Creo una nueva valoracion si no existe
             $nuevaValoracion = new Valoracion();
             $nuevaValoracion->usuario_id = $usuario_id;
             $nuevaValoracion->pelicula_id = $pelicula_id;

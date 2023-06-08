@@ -83,7 +83,6 @@ class UsuariosController extends Controller
      */
     public function destroy(User $usuario)
     {
-
         
         $usuario->delete();
 

@@ -33,10 +33,10 @@
                 
                 <td>
                 <form action="{{ route('admin.usuarios.destroy', $usuario) }}" method="POST">
-    @csrf
-    @method('delete')
-    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-</form>
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
                 </td>
             </tr>
             @endforeach

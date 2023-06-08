@@ -116,8 +116,6 @@ nav {
                   <p><button class="btn btn-primary" type="submit">Enviar</button></p>
                 </form>
               </div>
-          
-          
 
           @if (Auth::check())
               <div class="post-comment padding-top40">
