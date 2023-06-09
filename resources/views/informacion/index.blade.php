@@ -109,8 +109,8 @@ nav {
                     <label>Mensaje </label>
                     <textarea class="form-control" name="comentario" rows="8" required ></textarea>
 
-                    <input type="hidden" name="usuario_id" value="{{Auth::user()->id}}">
-                    <input type="hidden" name="pelicula_id" value="{{$informacionArray['id']}}">
+                    <input type="hidden" name="usuario_id" value="{{Auth::user()->id}}">  <!--Campo oculto, almaceno id usuario para asociar usuario con el comentario en la base de datos-->
+                    <input type="hidden" name="pelicula_id" value="{{$informacionArray['id']}}"> <!--Campo oculto, almaceno id pelicula para asociar usuario con el comentario en la base de datos-->
                   </div>
                   
                   <p><button class="btn btn-primary" type="submit">Enviar</button></p>
