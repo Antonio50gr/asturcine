@@ -68,9 +68,6 @@
         
         }
 
-     
-
-
 
     </style>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
@@ -79,7 +76,7 @@
         $(document).ready(function() {                      //metodo ready, verifico que el html fue cargado correctamente
             $('#searchBtn').click(function() {              //asigno evento click al id searchBtn               
                 let query = $('#query').val();              // obtengo valor de query, almacenando en query          
-                $.getJSON("https://api.themoviedb.org/3/search/movie?api_key=bad8933ed9f09142c82f2159db3edce3&language=es-US&query=" + query + "&page=1&include_adult=false", function(data) {
+                $.getJSON("https://api.themoviedb.org/3/search/movie?api_key=bad8933ed9f09142c82f2159db3edce3&language=es-US&query=" + query + "&page=1&include_adult=false", function(data) { //data tiene los datos que devuelve la API
                     console.log(data.results[0]);
                     $('#movie_name').html(data.results[0].title);
                     $('#movie_desc').html(data.results[0].overview);
@@ -141,14 +138,6 @@
           </div>
 </div>
 
-
-
-               
-
-        
-                
-
- 
 
 </x-app-layout>
 <link href="{{ asset('css/styles.css') }}" rel="stylesheet">

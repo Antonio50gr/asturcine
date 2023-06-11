@@ -92,7 +92,7 @@ nav {
         @can('Ver menus')
           
               <div class="post-comment padding-top40">
-                <h3>Deje su comentario</h3>
+                <h3>Añade un comentario</h3>
                 <form action="{{route('comentario.store')}}" role="form">
 
                   <div class="form-group">
@@ -119,7 +119,7 @@ nav {
 
           @if (Auth::check())
               <div class="post-comment padding-top40">
-                <h3>Deje su valoracion</h3>
+                <h3>Añade una valoración</h3>
                 <form action="{{route('valoracion.store')}}" role="form">
                   <div class="form-group"> 
                     <label>Valoración</label>

@@ -78,7 +78,7 @@
         $(document).ready(function() {
             $('#searchBtn').click(function() {
                 let query = $('#query').val();
-                $.getJSON("https://api.themoviedb.org/3/search/tv?api_key=bad8933ed9f09142c82f2159db3edce3&language=es-US&query=" + query + "&page=1&include_adult=false", function(data) {
+                $.getJSON("https://api.themoviedb.org/3/search/tv?api_key=bad8933ed9f09142c82f2159db3edce3&language=es-US&query=" + query + "&page=1&include_adult=false", function(data) { //data tiene los datos que devuelve la API
                     console.log(data.results[0]);
                     $('#movie_name').html(data.results[0].name);
                     $('#movie_desc').html(data.results[0].overview);
@@ -86,9 +86,9 @@
                     $('#poster').attr("src", "https://image.tmdb.org/t/p/w500" + data.results[0].poster_path);
                     $('#trailer').attr("src", ""); // Reinicio el enlace del trailer
 
-                    let movieId = data.results[0].id;
+                    let movieId = data.results[0].id; //obtengo id de la primera SERIE encontrada y almaceno en movieId
                     $.getJSON("https://api.themoviedb.org/3/tv/" + movieId + "/videos?api_key=bad8933ed9f09142c82f2159db3edce3&language=es-US", function(trailerData) {
-                if (trailerData.results.length > 0) {
+                if (trailerData.results.length > 0) {  //verifico si hay trailer
                     let trailerKey = trailerData.results[0].key;
                     let trailerUrl = "https://www.youtube.com/embed/" + trailerKey;
                     $('#trailer').attr("src", trailerUrl); // Establezco el enlace del trailer
