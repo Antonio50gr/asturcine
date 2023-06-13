@@ -25,9 +25,9 @@ class InformacionSeriesController extends Controller
         $informacionsimilar = HTTP::get('https://api.themoviedb.org/3/tv/'.$codigo.'/similar?api_key=bad8933ed9f09142c82f2159db3edce3&language=es-ES&page=1'); 
         $informacionsimilarArray = $informacionsimilar->json();
 
-        //consulta coincide id, en $comentarios se almacena la info
+        //consulta coincide id, en $comentarios se almacena la info para mostrar comentarios
         $comentarios = Comentario::where('pelicula_id', $informacionserieArray['id'])->get();
-        
+        //consulta coincide id, en $valoraciones se almacena la info para mostrar valoraciones
         $valoraciones = Valoracion::where('pelicula_id', $informacionserieArray['id'])->get();
 
         $notamedia = $this->calculateAverageRating($informacionserieArray['id']);

@@ -23,6 +23,12 @@ Route::get('informacion/{codigo}', [\App\Http\Controllers\InformacionController:
 Route::get('/series', [\App\Http\Controllers\SeriesController::class, 'index'])->middleware(['auth', 'verified'])->name('series');
 Route::get('informacionseries/{codigo}', [\App\Http\Controllers\InformacionSeriesController::class, 'index']) ->name('informacion.infoseries');
 
+//generos películas
+Route::resource('generos',\App\Http\Controllers\DashboardController::class)->names('generos');
+
+//generos series
+Route::resource('generosseries',\App\Http\Controllers\SeriesController::class)->names('generosseries');
+
 //actores
 Route::get('informacionactores/{codigo}', [\App\Http\Controllers\InformacionActoresController::class, 'index']) ->name('informacion.infoactores');
 
@@ -52,7 +58,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('generos',\App\Http\Controllers\DashboardController::class)->names('generos');
-Route::resource('generosseries',\App\Http\Controllers\SeriesController::class)->names('generosseries');
+
+
 
 

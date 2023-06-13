@@ -1,12 +1,6 @@
 <x-app-layout>
   
 <style>
-
-    </style>
-      
-
-
-<style>
         .card {
             margin-bottom: 20px;
         }
