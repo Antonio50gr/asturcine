@@ -17,11 +17,15 @@
     </style>
 
         <div class="menu">
-            @foreach($generosArray['genres'] as $genero) 
-                <div class="p-2">
-                    <a href="{{ route('generosseries.show',['generosseries'=>$genero['id']]) }}">{{$genero['name']}}</a>
-                </div>
-            @endforeach
+           
+                @foreach($generosArray['genres'] as $genero) 
+                @if ($genero['id'] !== 37)
+                    <div class="p-2">
+                        <a href="{{ route('generosseries.show',['generosseries'=>$genero['id']]) }}">{{$genero['name']}}</a>
+                    </div>
+                @endif
+                @endforeach
+            
         </div>
 
 

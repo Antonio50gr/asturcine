@@ -35,7 +35,9 @@ nav {
         @can('Ver menus')
           <div class="menu">
             @foreach($generosArray['genres'] as $genero) 
+            @if ($genero['id'] !== 37)
                     <a href="{{ route('generosseries.show',['generosseries'=>$genero['id']]) }}">{{$genero['name']}}</a>
+            @endif        
             @endforeach
           </div>
         @endcan
